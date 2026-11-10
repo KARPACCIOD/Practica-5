@@ -1,6 +1,7 @@
 import streamlit as st
 from modulos.login import login
 from modulos.VENTAS import mostrar_venta
+from modulos.CLIENTES import mostrar_cliente
 
 # Inicializar variables de sesión
 if "sesion_iniciada" not in st.session_state:
@@ -20,6 +21,7 @@ if st.session_state["sesion_iniciada"]:
 
     opciones = [
         "Ventas",
+        "Clientes",
         "Información"
     ]
 
@@ -31,6 +33,10 @@ if st.session_state["sesion_iniciada"]:
     # Mostrar módulo de ventas
     if seleccion == "Ventas":
         mostrar_venta()
+
+    # Mostrar módulo de clientes
+    elif seleccion == "Clientes":
+        mostrar_cliente()
 
     # Mostrar módulo de información
     elif seleccion == "Información":
