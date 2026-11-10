@@ -1,5 +1,5 @@
 import streamlit as st
-from config.conexion import obtener_conexion
+from Config.conexion import obtener_conexion
 def mostrar_venta():
  st.header("Registrar venta")
  with st.form("form_venta"):
